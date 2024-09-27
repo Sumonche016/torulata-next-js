@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.search-input {
+  @apply font-normal h-12 px-4 border border-gray-300 rounded-l-md focus:outline-none focus:shadow-inner;
+}
+
+.search-button {
+  @apply h-12 px-4 bg-[#81D742] text-white rounded-r-md uppercase text-xs tracking-wide border-0;
+}
+
+.cart_quantity {
+  width: auto;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -8px;
+  left: 18px;
+  background-color: #81d742;
+  color: #fff;
+  font-size: 14px;
+  padding: 3px 6px;
+  line-height: 0.8;
+}
+
+.nav {
+  box-shadow: 0 7px 20px 0px #00000012;
+}
+
+.my-drawer {
+  width: 30% !important;
+  box-shadow: 0 10px 25px rgba(60, 72, 88, 0.15) !important;
+}
+@media (max-width: 768px) {
+  .my-drawer {
+    width: 100% !important;
+  }
+  .custom-scroll {
+    max-height: calc(80vh - 8rem) !important;
+  }
+}
+
+.custom-scroll {
+  max-height: calc(80vh - 4rem);
+}
+
+.rdw-editor-wrapper {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 5px;
+}
+
+.css-dev-only-do-not-override-3rel02.ant-btn-primary {
+  background: #059669 !important;
+}
+
+.shadow-deep {
+  box-shadow: 0 4px 30px 8px rgba(60, 72, 88, 0.15) !important;
+}
+/* spinner.css */
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.loading {
+  position: relative;
+  margin: 4.8rem auto;
+  width: 6.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #059669 94%, #0000) top/10px 10px
+      no-repeat,
+    conic-gradient(#0000 30%, #059669);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
+  animation: rotate 1.5s infinite linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.spinner-text {
+  position: absolute;
+  color: black; /* Text color */
+  /* Center the text inside the spinner */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  animation: rotate 1.5s infinite linear reverse; /* Rotates the text counter to the spinner */
+}
