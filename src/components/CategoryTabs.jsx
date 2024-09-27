@@ -15,7 +15,7 @@ const CategoryTabs = ({ searchParams, categories }) => {
             className={`rounded-lg text-[13px] md:text-[.95rem] px-[18px] md:px-[27px] py-[8px] font-medium ${
               searchParams.category === category.value ||
               (!searchParams.category && category.value === "")
-                ? "bg-[#059669] text-white"
+                ? "bg-[#166e21] text-white"
                 : "bg-white"
             }`}
           >
