@@ -15,8 +15,8 @@ const FooterNav = dynamic(() => import("../components/FooterNav.jsx"), {
 });
 
 export const metadata = {
-  title: "Oroonno",
-  description: "Stay Green Stay Trusted",
+  title: "তরুলতা",
+  description: "একটি গ্রীন প্রোজেক্ট কোম্পানি- Breath Easy with our plants!",
 };
 
 export default function RootLayout({ children }) {

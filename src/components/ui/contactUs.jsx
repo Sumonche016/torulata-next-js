@@ -49,21 +49,21 @@ const Contact = () => {
                     <IoIosPeople />
                     <h1 className="text-[12px]">Name</h1>
                   </div>
-                  <h1 className="text-[17px]">Oroonno</h1>
+                  <h1 className="text-[17px]">তরুলতা</h1>
                 </div>
                 <div className="mt-6">
                   <div className="flex gap-1 items-center">
                     <MdOutlineEmail />
                     <h1 className="text-[12px]">Email</h1>
                   </div>
-                  <h1 className="text-[17px]">info.oroonno@gmail.com</h1>
+                  <h1 className="text-[17px]">info.torlata@gmail.com</h1>
                 </div>
                 <div className="mt-6">
                   <div className="flex gap-1 items-center">
                     <BiPhone />
                     <h1 className="text-[12px]">Phone</h1>
                   </div>
-                  <h1 className="text-[17px]">01711258558</h1>
+                  <h1 className="text-[17px]">01708669918</h1>
                 </div>
                 <div className="mt-6">
                   <div className="flex gap-1 items-center">

@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const FooterNav = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const phoneNumber = "+8801711258558";
+  const phoneNumber = "+8801708669918";
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -28,7 +28,7 @@ const FooterNav = () => {
 
   const handleMessengerClick = () => {
     // Replace 'YOUR_FACEBOOK_PAGE_ID' with your actual Facebook Page ID
-    window.open("https://m.me/61561305989542", "_blank");
+    window.open("https://m.me/torulata24", "_blank");
   };
 
   const handleDirectCallClick = () => {
