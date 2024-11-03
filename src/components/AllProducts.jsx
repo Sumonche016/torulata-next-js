@@ -1,12 +1,17 @@
 "use client";
-
 import Image from "next/image";
-import Link from "next/link";
 import BuyNowButton from "./BuyNowButton";
 import { useState } from "react";
 import cn from "clsx";
+import { useRouter } from "next/navigation";
 const AllProducts = ({ res }) => {
   const [isLoading, setLoading] = useState(true);
+  const router = useRouter();
+  const handleBuyNowClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   return (
     <div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
@@ -15,7 +20,10 @@ const AllProducts = ({ res }) => {
             key={item._id}
             className="bg-white shadow-card border border-card rounded-[8px]"
           >
-            <Link href={`/product/${item._id}`}>
+            <div
+              className="cursor-pointer"
+              onClick={() => router.push(`/product/${item._id}`)}
+            >
               <div className="relative md:h-[18rem] h-[11rem] w-full">
                 <Image
                   alt={item.product_title}
@@ -26,11 +34,11 @@ const AllProducts = ({ res }) => {
                       : "grayscale-0 blur-0 scale-100"
                   )}
                   src={item.product_images}
-                  layout="fill" // Make the image fill the parent
-                  objectFit="cover" // Ensure the image covers the whole area
+                  fill={true} // Make the image fill the parent
+                  style={{ objectFit: "cover" }} // Ensure the image covers the whole area
                   quality={75} // Adjust the quality of the image
                   loading="lazy" // Enable lazy loading
-                  onLoadingComplete={() => setLoading(false)}
+                  onLoad={() => setLoading(false)}
                 />
               </div>
 
@@ -52,14 +60,17 @@ const AllProducts = ({ res }) => {
                           &#2547;800
                         </del>
                       </div>
-                      <div className="mt-2 flex items-center w-full">
+                      <div
+                        className="mt-2 flex items-center w-full"
+                        onClick={handleBuyNowClick}
+                      >
                         <BuyNowButton product={item} />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           </div>
         ))}
       </div>

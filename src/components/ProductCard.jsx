@@ -40,7 +40,7 @@ const ProductCard = async ({ searchParams }) => {
               limit ? limit + 20 : 40
             }&skipFrom=0`}
           >
-            <button className="px-8 py-3 bg-[#059669] text-white font-medium  rounded-md shadow-sm">
+            <button className="px-8 py-3 bg-[#166e21] text-white font-medium  rounded-md shadow-sm">
               See More
             </button>
           </Link>

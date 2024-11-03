@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { Table, Button, Space, Modal } from "antd";
+import { Table, Button, Space, Modal, Input } from "antd";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { customRevalidateTag } from "@/lib/customRevalidate";
 import { useRouter } from "next/navigation";
@@ -10,6 +10,12 @@ const ProductsTable = ({ products }) => {
   const [deletingProductId, setDeletingProductId] = useState(null);
   const [isDeleting, setIsDeleting] = useState(false);
   const router = useRouter();
+  const [searchText, setSearchText] = useState("");
+
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchText.toLowerCase())
+  );
+
   const handleEdit = (id) => {
     router.push(`/products/edit/${id}`);
   };
@@ -101,7 +107,13 @@ const ProductsTable = ({ products }) => {
 
   return (
     <div className="">
-      <Table dataSource={products} columns={columns} />
+      <Input.Search
+        placeholder="Search products by name"
+        onChange={(e) => setSearchText(e.target.value)}
+        className="mb-4 max-w-md"
+        allowClear
+      />
+      <Table dataSource={filteredProducts} columns={columns} />
       <Modal
         title="Confirm Deletion"
         visible={isModalVisible}

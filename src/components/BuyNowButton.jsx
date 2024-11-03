@@ -26,6 +26,7 @@ const BuyNowButton = ({ product }) => {
 
   const handleRemoveFromCart = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     if (typeof window !== "undefined") {
       const products = localStorage.getItem("products");
 

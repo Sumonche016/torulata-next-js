@@ -25,11 +25,12 @@ const AllFalGach = ({ res }) => {
                     : "grayscale-0 blur-0 scale-100"
                 )}
                 src={item.product_images}
-                layout="fill" // Make the image fill the parent
-                objectFit="cover" // Ensure the image covers the whole area
+                fill={true} // Make the image fill the parent
+                style={{ objectFit: "cover" }} // Ensure the image covers the whole area
+                // Ensure the image covers the whole area
                 quality={75} // Adjust the quality of the image
                 loading="lazy" // Enable lazy loading
-                onLoadingComplete={() => setLoading(false)}
+                onLoad={() => setLoading(false)}
               />
             </div>
 

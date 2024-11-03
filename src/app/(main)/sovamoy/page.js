@@ -6,7 +6,7 @@ import SuspanseLoader from "@/app/(dashboard)/banner/SuspanseLoader";
 
 const page = async () => {
   let payload = {
-    limit: "5000",
+    limit: "20",
     category: "শোভাময় গাছ",
   };
   let products = await getAllProducts(payload);
